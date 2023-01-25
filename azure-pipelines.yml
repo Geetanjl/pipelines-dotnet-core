@@ -20,19 +20,19 @@ steps:
   displayName: dotnet build
   inputs:
     command: 'build'
-    projects: 'pipelines-dotnet-core/pipelines-dotnet-core.csproj'
+    projects: 'pipelines-dotnet-core.csproj'
     workingDirectory: 'pipelines-dotnet-core'
 - task: DotNetCoreCLI@2
   displayName: dotnet run
   inputs:
     command: 'run'
-    projects: 'pipelines-dotnet-core/pipelines-dotnet-core.csproj'
+    projects: 'pipelines-dotnet-core.csproj'
     workingDirectory: 'pipelines-dotnet-core'
 - task: DotNetCoreCLI@2
   displayName: dotnet test
   inputs:
     command: 'test'
-    projects: 'pipelines-dotnet-core/pipelines-dotnet-core.csproj'
+    projects: 'pipelines-dotnet-core.csproj'
 - task: DotNetCoreCLI@2
   displayName: publish artifact
   inputs:
